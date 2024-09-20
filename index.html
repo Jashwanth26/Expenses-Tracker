@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Expense Tracker</h1>
+        <form id="transaction-form">
+            <input type="text" id="transaction-name" placeholder="Transaction Name" required>
+            <input type="number" id="transaction-amount" placeholder="Amount" required>
+            <input type="date" id="transaction-date" required>
+            <select id="transaction-category" required>
+                <option value="" disabled selected>Category</option>
+                <option value="food">Food</option>
+                <option value="groceries">Groceries</option>
+                <option value="transport">Transport</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="other">Other</option>
+            </select>
+            <button type="submit">Add Transaction</button>
+        </form>
+        <ul id="transaction-list"></ul>
+        <button id="clear-transactions">Clear All</button>
+        <button id="view-summary">View Summary</button>
+        <div id="summary-container">
+            <h2>Summary</h2>
+            <label for="year-select">Year:</label>
+            <select id="year-select"></select>
+            <label for="month-select">Month:</label>
+            <select id="month-select"></select>
+            <div id="summary-table-container"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
